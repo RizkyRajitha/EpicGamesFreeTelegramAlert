@@ -27,13 +27,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libgbm1
 
-      - name: run yarn install 
+      - name: run yarn install
         run: |
           yarn install
 
       - name: run script
         if: ${{ success() }}
+        with:
+          TELEGRAM_BOT_ID: ${{ secrets.TELEGRAM_BOT_ID }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           node app.js
-
-     
