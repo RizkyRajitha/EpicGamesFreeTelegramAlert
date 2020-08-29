@@ -33,5 +33,8 @@ jobs:
 
       - name: telegram script
         if: ${{ success() }}
+        env:
+          TELEGRAM_BOT_ID: ${{ secrets.TELEGRAM_BOT_ID }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           node app.js

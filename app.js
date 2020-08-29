@@ -13,10 +13,10 @@ const FormData = require("form-data");
 
 let browser;
 
-const run = async () => {
-  const TELEGRAM_BOT_ID = core.getInput("TELEGRAM_BOT_ID");
-  const TELEGRAM_CHAT_ID = core.getInput("TELEGRAM_CHAT_ID");
+const TELEGRAM_BOT_ID = process.env.TELEGRAM_BOT_ID;
+const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
+const run = async () => {
   browser = await puppeteer.launch({
     // headless: false,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
