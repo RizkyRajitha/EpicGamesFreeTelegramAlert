@@ -57,7 +57,7 @@ const run = async () => {
 
   try {
     let data = await fetch(
-      `https://api.telegram.org/bot${TELEGRAM_BOT_ID}/sendPhoto?chat_id=${TELEGRAM_CHAT_ID}`,
+      `https://api.telegram.org/${TELEGRAM_BOT_ID}/sendPhoto?chat_id=${TELEGRAM_CHAT_ID}`,
       //   requestOptions
       {
         method: "POST",
