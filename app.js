@@ -52,6 +52,9 @@ const run = async () => {
   //     .catch(error => console.log('error', error));
 
   //   `https://api.telegram.org/bot${TELEGRAM_BOT_ID}/sendPhoto?chat_id=${TELEGRAM_CHAT_ID}
+
+  console.log('adadsa'+TELEGRAM_CHAT_ID);
+
   try {
     let data = await fetch(
       `https://api.telegram.org/bot${TELEGRAM_BOT_ID}/sendPhoto?chat_id=${TELEGRAM_CHAT_ID}`,
