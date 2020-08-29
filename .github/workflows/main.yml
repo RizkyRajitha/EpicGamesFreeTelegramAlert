@@ -31,7 +31,7 @@ jobs:
         run: |
           yarn install
 
-      - name: run script
+      - name: telegram script
         if: ${{ success() }}
         with:
           TELEGRAM_BOT_ID: ${{ secrets.TELEGRAM_BOT_ID }}
